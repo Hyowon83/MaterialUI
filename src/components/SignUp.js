@@ -42,6 +42,9 @@ export default function SignUp() {
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
+        {/* <div className="c1image">
+            <img className="phoneImage" src="img/genergy_logo.jpg" width="400px" />
+        </div> */}
         <Typography component="h1" variant="h5">
           Sign up
         </Typography>
