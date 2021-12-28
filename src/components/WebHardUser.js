@@ -8,8 +8,6 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
-// import { mainListItems } from './listItems';
 import Table from './Table';
 import Tree from './Tree';
 
@@ -60,6 +58,9 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
     textDecorationLine: 'underLine'
   },
+  iconButton: {
+    marginLeft: 'auto',
+  },
 }));
 
 export default function Dashboard() {
@@ -87,12 +88,8 @@ export default function Dashboard() {
                   <Typography component="h1" variant="h5" color="inherit" noWrap className={classes.title}>
                     Webhard
                   </Typography>
-                  
-                  <IconButton color="inherit">
+                  <IconButton color="inherit" className={classes.iconButton}>
                       <AccountCircleIcon />
-                  </IconButton>
-                  <IconButton color="inherit">
-                      <PeopleAltIcon />
                   </IconButton>
                 </Toolbar>
               </Paper>

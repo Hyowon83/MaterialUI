@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   avatar: {
-    margin: theme.spacing(1),
+    marginTop: theme.spacing(-2),
+    marginBottom: theme.spacing(1),
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
@@ -54,10 +55,10 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
+            id="id"
+            label="ID"
+            name="id"
+            autoComplete="id"
             autoFocus
           />
           <TextField
@@ -70,10 +71,6 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
           />
           <Button
             type="submit"
