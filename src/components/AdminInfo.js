@@ -5,7 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -35,10 +34,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const goToLogIn = () => {
-  window.location.href = '/'
-}
-
 export default function SignUp() {
   const classes = useStyles();
 
@@ -46,18 +41,13 @@ export default function SignUp() {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        {/* <div className="c1image">
-            <img className="phoneImage" src="img/genergy_logo.jpg" width="400px" />
-        </div> */}
+        <Avatar className={classes.avatar} />
         <Typography component="h1" variant="h5">
-          Sign up
+          My Information
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={9}>
+            <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 required
@@ -66,39 +56,6 @@ export default function SignUp() {
                 label="ID"
                 id="id"
                 autoFocus
-              />
-            </Grid>
-            <Grid item xs={12} sm={3}>
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.check}
-              >
-                중복확인
-            </Button>    
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="password"
-                label="Password Check"
-                type="password"
-                id="password"
               />
             </Grid>
             <Grid item xs={12}>
@@ -136,20 +93,18 @@ export default function SignUp() {
             </Grid>
           </Grid>
           <Button
-            // type="submit"
             type="button"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={goToLogIn}
           >
-            Sign Up
+            Edit
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="/" variant="body2">
-                Already have an account? Sign in
+              <Link href="/webhard" variant="body2">
+                ←back
               </Link>
             </Grid>
           </Grid>

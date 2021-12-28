@@ -63,9 +63,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const goToInfo = () => {
+  window.location.href = '/myInfo'
+}
+
+
 export default function Dashboard() {
   const classes = useStyles();
-
+  
   return (
     <div className={classes.root}>
       <main className={classes.content}>
@@ -88,7 +93,7 @@ export default function Dashboard() {
                   <Typography component="h1" variant="h5" color="inherit" noWrap className={classes.title}>
                     Webhard
                   </Typography>
-                  <IconButton color="inherit" className={classes.iconButton}>
+                  <IconButton color="inherit" className={classes.iconButton} onClick={goToInfo}>
                       <AccountCircleIcon />
                   </IconButton>
                 </Toolbar>

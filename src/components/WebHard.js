@@ -60,7 +60,14 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
     textDecorationLine: 'underLine'
   },
+  iconButton: {
+    marginLeft: 'auto',
+  },
 }));
+
+const goToAdminInfo = () => {
+  window.location.href = '/adminInfo'
+}
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -88,7 +95,7 @@ export default function Dashboard() {
                     Webhard
                   </Typography>
                   
-                  <IconButton color="inherit">
+                  <IconButton color="inherit" onClick={goToAdminInfo} className={classes.iconButton}>
                       <AccountCircleIcon />
                   </IconButton>
                   <IconButton color="inherit">

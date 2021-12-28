@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const goToWebhard = () => {
+  window.location.href = '/webhardUser'
+}
+
 export default function SignIn() {
   const classes = useStyles();
 
@@ -73,11 +77,13 @@ export default function SignIn() {
             autoComplete="current-password"
           />
           <Button
-            type="submit"
+            // type="submit"
+            type="button"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={goToWebhard}
           >
             Sign In
           </Button>
